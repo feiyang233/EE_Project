@@ -1,4 +1,5 @@
 import csv 
+'''
 rf = open('2017-09-02.csv','r') 
 reader = csv.reader(rf)
 test=open('test.csv','w')
@@ -15,13 +16,17 @@ for row in reader:
 		buffer1=[]
 		count=0
 		buffer1.append(time)
-	MAC,APmac,lat,lon=row[1],row[8],row[16],row[17]
-	buffer1.extend([MAC,APmac,lat,lon])
+	lat,lon=row[16],row[17]
+	buffer1.extend([lat,lon])
 	count=count+1
 rf.close()
 test.close()
-
-
+'''
+f=open('test.csv','r')
+reader = csv.reader(f)
+for row in reader:
+	x=row(2::2)
+	y=row(3::2)
 
 	
 

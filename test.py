@@ -1,9 +1,17 @@
+from numpy import *  
+import matplotlib  
+import matplotlib.pyplot as plt  
 import csv
-test=open('test.csv','r')
-reader=csv.reader(test)
-T='2017-09-02T00:00:04'
+  
+f=open('test.csv','r')
+reader = csv.reader(f)
 for row in reader:
-	T=row[0][-8:]
-	print(T)
-test.close()
+	x=row[2::2]
+	y=row[3::2]
+	break
+f1 = plt.figure(1)  
+ 
+plt.scatter(x,y) 
+
+plt.show()
 
