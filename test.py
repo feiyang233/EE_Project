@@ -32,8 +32,6 @@ for row in reader:
 	y=[]
 print(n)
 
-#x=[(float(i)-1.298)*1000 for i in x]
-#y=[(float(i)-103.77)*1000 for i in y]
 
 
 
