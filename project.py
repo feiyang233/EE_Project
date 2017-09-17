@@ -1,6 +1,6 @@
 import csv 
 '''
-rf = open('2017-09-02.csv','r') 
+rf = open('2017-09-07.csv','r') 
 reader = csv.reader(rf)
 test=open('test.csv','w')
 writer=csv.writer(test)
@@ -22,11 +22,11 @@ for row in reader:
 rf.close()
 test.close()
 '''
-f=open('test.csv','r')
-reader = csv.reader(f)
-for row in reader:
-	x=row(2::2)
-	y=row(3::2)
+x=[1,2,3,4]
+print(x)
+x=[2]
+print(x)
+
 
 	
 
