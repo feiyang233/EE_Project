@@ -1,9 +1,9 @@
-import csv 
+import csv   #总表，行为device，列为时间。
 def repeat(L):   #去重
 	L2=list(set(L))
 	L2.sort(key=L.index)
 	return L2
-#删除功能，待完成
+#一列删除功能
 def delete(y_):
 	for i in range(Row):
 		del list_2d[i][y_]
@@ -47,7 +47,7 @@ for i in time:    #时间放进2维数组
 rf.seek(0)
 for row in reader:
 	x=time.index(row[0])
-	y=Mac.index(row[1])
+	y=Mac.index(row[1])  #这里报错，是由于后面的覆盖导致的，所有当有错的时候，记得看之前的每一步，尤其是后面的循环。
 	location=row[16]+'\\'+row[17]  
 	fltime=row[14][5:19]+'\\'+row[15][5:19]
 	list_2d[x][y]=location
