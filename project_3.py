@@ -1,5 +1,6 @@
-import csv   #总表，行为device，列为时间。
-def repeat(L):   #去重
+import csv   #总表，行为device，列为时间
+
+def repeat(L):   #列表去重，不改变原来的顺序
 	L2=list(set(L))
 	L2.sort(key=L.index)
 	return L2
@@ -8,9 +9,11 @@ def delete(y_):
 	for i in range(Row):
 		del list_2d[i][y_]
 
-rf = open('2017-09-02.csv','r') 
+filename='2017-11-01.csv'
+
+rf = open(filename,'r') 
 reader = csv.reader(rf)
-test=open('info.csv','w')
+test=open('overall'+filename,'w')
 writer=csv.writer(test)
 Mac=[]
 time=[]
@@ -39,8 +42,8 @@ list_2d[1]=[0 for i in range(line)]
 n=0
 for i in time:    #时间放进2维数组
 	
-	list_2d[n][0]=i
-	list_2d[n][1]=0
+	list_2d[n][0]=i #放时间
+	list_2d[n][1]=0 #统计这一时刻有多少device
 	n=n+1
 
 
@@ -55,15 +58,16 @@ for row in reader:
 	count=int(list_2d[x][1])+1
 	list_2d[x][1]=count 
 	if x<98:
-		in_time=int(list_2d[1][y])+5
+		in_time=int(list_2d[1][y])+5  #统计每个device出现的时间一共是多少，8点前
 	else:
-		in_time=int(list_2d[1][y])+1
+		in_time=int(list_2d[1][y])+1  #8点后的
 	list_2d[1][y]=in_time
 
-list_2d[0][1]=line1-3
+list_2d[0][1]=line1-3 #设备统计修正
 
-for i in range(3):
-	delete(2)
+for i in range(3): #  first\last  latitude\longitude  LocatedTime\ocatedTime
+
+	delete(2)       #多余的三行
 
 
 for row in list_2d:
