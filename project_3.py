@@ -6,10 +6,11 @@ def repeat(L):   #列表去重，不改变原来的顺序
 	return L2
 #一列删除功能
 def delete(y_):
-	for i in range(Row):
+	for i in range(Row): #Row是全局变量
 		del list_2d[i][y_]
 
-filename='2017-11-01.csv'
+filename='2017-11-01.csv' 
+target=filename[0:4]+filename[5:7]+filename[8:10]+'-08:00:01'
 
 rf = open(filename,'r') 
 reader = csv.reader(rf)
@@ -30,7 +31,7 @@ Mac.insert(1,len(Mac))
 line1=len(Mac)
 
 for i in range(2,2*line1,2):
-	Mac.insert(i,'first\last')
+	Mac.insert(i,'')
 
 Row=len(time)
 line=len(Mac)
@@ -40,13 +41,15 @@ list_2d[0]=Mac     #mac放进2维数据
 list_2d[1]=[0 for i in range(line)]
 
 n=0
+
 for i in time:    #时间放进2维数组
-	
+
 	list_2d[n][0]=i #放时间
 	list_2d[n][1]=0 #统计这一时刻有多少device
 	n=n+1
 
-
+index_8=time.index(target)  #找到八点的位置在哪里，为了后面统计设备存在时间
+print(index_8)
 rf.seek(0)
 for row in reader:
 	x=time.index(row[0])
@@ -55,9 +58,14 @@ for row in reader:
 	fltime=row[14][5:19]+'\\'+row[15][5:19]
 	list_2d[x][y]=location
 	list_2d[x][y+1]=fltime
+	if row[6]=='':            #添加标签，统计比例
+		row[6]='unknow'
+
+	list_2d[0][y+1]=row[6]
 	count=int(list_2d[x][1])+1
 	list_2d[x][1]=count 
-	if x<98:
+
+	if x<index_8:
 		in_time=int(list_2d[1][y])+5  #统计每个device出现的时间一共是多少，8点前
 	else:
 		in_time=int(list_2d[1][y])+1  #8点后的
@@ -66,13 +74,29 @@ for row in reader:
 list_2d[0][1]=line1-3 #设备统计修正
 
 for i in range(3): #  first\last  latitude\longitude  LocatedTime\ocatedTime
-
+	
 	delete(2)       #多余的三行
 
+proportion=list_2d[0][3::2]
 
+staff=0
+student=0
+unknow=0
+edu=0
+for i in proportion: #统计人群的类别
+	if i=='NUS_2-4GHz'or i=='NUS':
+		staff+=1
+	elif i=='eduroam':
+		edu+=1
+	elif i=='unknow':
+		unknow+=1
+	else:
+		student+=1
+A=['staff',staff,'student',student,'edu',edu,'unknow',unknow]
 for row in list_2d:
 	writer.writerow(row)
-
+writer.writerow(A)
+print(A)
 
 rf.close()
 test.close()
