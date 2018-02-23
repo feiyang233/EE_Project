@@ -5,10 +5,10 @@
 import csv
 import pymysql
 import os
-
+import difftime
 # 打开数据库连接
 def mysqlwrite(filename,loca):
-	db = pymysql.connect("localhost","root","feiyang","MSE" )
+	db = pymysql.connect("localhost","root","feiyang","feiyang" )
 	rf=open(filename,'r') 
 	reader=csv.reader(rf)
 
@@ -19,7 +19,7 @@ def mysqlwrite(filename,loca):
 	 
 	# 使用预处理语句创建表
 	try:
-		sql = "CREATE TABLE test (time DATETIME,mac varchar(50), location varchar(20),latitude FLOAT, longitude FLOAT)" #leave 居然是关键字
+		sql = "CREATE TABLE test (curtime DATETIME,firstime DATETIME,dwell FLOAT,mac varchar(50),label varchar(10), location varchar(20),latitude FLOAT, longitude FLOAT)" #leave 居然是关键字
 		cursor.execute(sql) 
 	except pymysql.InternalError as e:
 		code, message = e.args
@@ -29,8 +29,9 @@ def mysqlwrite(filename,loca):
 	#db.commit()
 	h=next(reader)
 	for row in reader:
-		lis=[row[0],row[1],loca,row[-2],row[-1]]
-		cursor.execute("insert into test (time, mac, location,latitude, longitude) values (%s,%s,%s,%s,%s)",(lis))
+		dwelltime=difftime.difftime(row[14],row[0])
+		lis=[row[0],row[14],dwelltime,row[1],row[6],loca,row[-2],row[-1]]
+		cursor.execute("insert into test (curtime,firstime,dwell, mac, label,location,latitude, longitude) values (%s,%s,%s,%s,%s,%s,%s,%s)",(lis))
 
 	db.commit() 
 	# 关闭数据库连接

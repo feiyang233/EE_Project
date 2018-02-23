@@ -28,7 +28,7 @@ def copy(date,location):
 	path_csv=workdir+subpath
 	filename_zip=date[0:4]+'_week'+str(week)+'.zip'
 	shutil.copyfile(path_csv+filename_zip,filename_zip)
-	print('copy success')
+	print('download success')
 
 	zipFile = zipfile.ZipFile(os.path.join(os.getcwd(), filename_zip))
 	zipFile.extract(date_csv)
