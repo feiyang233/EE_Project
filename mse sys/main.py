@@ -1,6 +1,7 @@
 import mysqlwrite
-import copy
+import copy #从共享文档下载解压
 import uniform
+import main_rate
 import tkinter as tk
 
 op0=['CELC','E1','E2','E3','E4','E5','EW2','SDE1','SDE2','SDE3','EA','E2A','E1A','E3A','E4A',\
@@ -57,7 +58,7 @@ option_floor =tk.OptionMenu(window, var_floor,*OPTIONS_floor)#*就是未知参�
 option_floor.place(x=160, y=100)
 
 var_date = tk.StringVar()
-var_date.set('20180215')
+var_date.set('20180301')
 entry_date = tk.Entry(window, textvariable=var_date)
 entry_date.place(x=160, y=140)
 
@@ -80,6 +81,11 @@ def quick_run():
 		lb.insert('end', 'writeMySQL success')
 		lb.insert('end', '')
 
+		main_rate.rate(filename) #计算速率
+		lb.insert('end', 'Rate success')
+		lb.insert('end', '')
+
+
 	except ValueError:
 		var_list.set('invalid_address')
     
@@ -101,6 +107,11 @@ def run():
 		mysqlwrite.mysqlwrite(filename,location)
 		lb.insert('end', 'writeMySQL success')
 		lb.insert('end', '')
+
+		main_rate.rate(filename) #计算速率
+		lb.insert('end', 'Rate success')
+		lb.insert('end', '')
+
 
 	except ValueError:
 		var_list.set('invalid_address')

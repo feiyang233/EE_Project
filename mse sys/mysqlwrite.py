@@ -19,7 +19,7 @@ def mysqlwrite(filename,loca):
 	 
 	# 使用预处理语句创建表
 	try:
-		sql = "CREATE TABLE test (curtime DATETIME,firstime DATETIME,dwell FLOAT,mac varchar(50),label varchar(10), location varchar(20),latitude FLOAT, longitude FLOAT)" #leave 居然是关键字
+		sql = "CREATE TABLE test (Time DATETIME,Firstime DATETIME,Dwell FLOAT,Mac varchar(50),Label varchar(10), Location varchar(20),Latitude FLOAT, Longitude FLOAT)" #leave 居然是关键字
 		cursor.execute(sql) 
 	except pymysql.InternalError as e:
 		code, message = e.args
@@ -31,13 +31,13 @@ def mysqlwrite(filename,loca):
 	for row in reader:
 		dwelltime=difftime.difftime(row[14],row[0])
 		lis=[row[0],row[14],dwelltime,row[1],row[6],loca,row[-2],row[-1]]
-		cursor.execute("insert into test (curtime,firstime,dwell, mac, label,location,latitude, longitude) values (%s,%s,%s,%s,%s,%s,%s,%s)",(lis))
+		cursor.execute("insert into test (Time,Firstime,Dwell, Mac, Label,Location,Latitude, Longitude) values (%s,%s,%s,%s,%s,%s,%s,%s)",(lis))
 
 	db.commit() 
 	# 关闭数据库连接
 	db.close()
 	rf.close()
-	os.remove(filename)
+	#os.remove(filename) 等速度计算后删除
 	print('success write MySQL')
 
 #mysqlwrite('2017-09-07.csv','E1')
