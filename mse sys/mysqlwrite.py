@@ -19,19 +19,19 @@ def mysqlwrite(filename,loca):
 	 
 	# 使用预处理语句创建表
 	try:
-		sql = "CREATE TABLE test (Time DATETIME,Firstime DATETIME,Dwell FLOAT,Mac varchar(50),Label varchar(10), Location varchar(20),Latitude FLOAT, Longitude FLOAT)" #leave 居然是关键字
+		sql = "CREATE TABLE test (Time DATETIME,Firstime DATETIME,Dwell FLOAT,User varchar(50),Type varchar(10), Location varchar(20),Latitude FLOAT, Longitude FLOAT)" #leave 居然是关键字
 		cursor.execute(sql) 
 	except pymysql.InternalError as e:
 		code, message = e.args
 		print (">>>>>>>>>>>>>", code, message)
 
 
-	#db.commit()
+	db.commit()
 	h=next(reader)
 	for row in reader:
 		dwelltime=difftime.difftime(row[14],row[0])
 		lis=[row[0],row[14],dwelltime,row[1],row[6],loca,row[-2],row[-1]]
-		cursor.execute("insert into test (Time,Firstime,Dwell, Mac, Label,Location,Latitude, Longitude) values (%s,%s,%s,%s,%s,%s,%s,%s)",(lis))
+		cursor.execute("insert into test (Time,Firstime,Dwell, User, Type,Location,Latitude, Longitude) values (%s,%s,%s,%s,%s,%s,%s,%s)",(lis))
 
 	db.commit() 
 	# 关闭数据库连接
