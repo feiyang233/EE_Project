@@ -304,18 +304,72 @@
               <breakdown value='auto' />
             </view>
             <mark class='Automatic' />
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Time:&#9;</run>
+                <run bold='true'>&lt;[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[tmi:Time:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Avg. Dwell:&#9;</run>
+                <run bold='true'>&lt;[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[avg:Dwell:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Avg. Inflow:&#9;</run>
+                <run bold='true'>&lt;[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[avg:Inflow:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Avg. Outflow:&#9;</run>
+                <run bold='true'>&lt;[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[avg:Outflow:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>No. of User:&#9;</run>
+                <run bold='true'>&lt;[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[ctd:User:qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
           </pane>
           <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[ctd:User:qk]'>
             <view>
               <breakdown value='auto' />
             </view>
             <mark class='Automatic' />
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Time:&#9;</run>
+                <run bold='true'>&lt;[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[tmi:Time:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Avg. Dwell:&#9;</run>
+                <run bold='true'>&lt;[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[avg:Dwell:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Avg. Inflow:&#9;</run>
+                <run bold='true'>&lt;[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[avg:Inflow:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Avg. Outflow:&#9;</run>
+                <run bold='true'>&lt;[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[avg:Outflow:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>No. of User:&#9;</run>
+                <run bold='true'>&lt;[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[ctd:User:qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
           </pane>
           <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[avg:Dwell:qk]'>
             <view>
               <breakdown value='auto' />
             </view>
             <mark class='Automatic' />
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Time:&#9;</run>
+                <run bold='true'>&lt;[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[tmi:Time:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Avg. Dwell:&#9;</run>
+                <run bold='true'>&lt;[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[avg:Dwell:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Avg. Inflow:&#9;</run>
+                <run bold='true'>&lt;[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[avg:Inflow:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Avg. Outflow:&#9;</run>
+                <run bold='true'>&lt;[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[avg:Outflow:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>No. of User:&#9;</run>
+                <run bold='true'>&lt;[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[ctd:User:qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
             <style>
               <style-rule element='mark'>
                 <format attr='mark-color' value='#e15759' />
@@ -327,6 +381,24 @@
               <breakdown value='auto' />
             </view>
             <mark class='Automatic' />
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Time:&#9;</run>
+                <run bold='true'>&lt;[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[tmi:Time:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Avg. Dwell:&#9;</run>
+                <run bold='true'>&lt;[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[avg:Dwell:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Avg. Inflow:&#9;</run>
+                <run bold='true'>&lt;[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[avg:Inflow:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Avg. Outflow:&#9;</run>
+                <run bold='true'>&lt;[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[avg:Outflow:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>No. of User:&#9;</run>
+                <run bold='true'>&lt;[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[ctd:User:qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
             <style>
               <style-rule element='mark'>
                 <format attr='mark-color' value='#59a14f' />
@@ -338,6 +410,24 @@
               <breakdown value='auto' />
             </view>
             <mark class='Automatic' />
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Time:&#9;</run>
+                <run bold='true'>&lt;[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[tmi:Time:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Avg. Dwell:&#9;</run>
+                <run bold='true'>&lt;[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[avg:Dwell:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Avg. Inflow:&#9;</run>
+                <run bold='true'>&lt;[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[avg:Inflow:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Avg. Outflow:&#9;</run>
+                <run bold='true'>&lt;[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[avg:Outflow:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>No. of User:&#9;</run>
+                <run bold='true'>&lt;[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[ctd:User:qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
             <style>
               <style-rule element='mark'>
                 <format attr='mark-color' value='#000000' />
@@ -448,6 +538,15 @@
               <wedge-size column='[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[ctd:User:qk]' />
               <text column='[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[ctd:User:qk]' />
             </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Type:&#9;</run>
+                <run bold='true'>&lt;[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[none:Type:nk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>No. of User:&#9;</run>
+                <run bold='true'>&lt;[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[ctd:User:qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
             <style>
               <style-rule element='mark'>
                 <format attr='mark-labels-show' value='true' />
@@ -489,12 +588,36 @@
               <breakdown value='auto' />
             </view>
             <mark class='Automatic' />
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Time:&#9;</run>
+                <run bold='true'>&lt;[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[tmi:Time:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>No. User:&#9;</run>
+                <run bold='true'>&lt;[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[ctd:User:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Type:&#9;</run>
+                <run bold='true'>&lt;[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[none:Type:nk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
           </pane>
           <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[ctd:User:qk]'>
             <view>
               <breakdown value='auto' />
             </view>
             <mark class='Automatic' />
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Time:&#9;</run>
+                <run bold='true'>&lt;[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[tmi:Time:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>No. User:&#9;</run>
+                <run bold='true'>&lt;[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[ctd:User:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Type:&#9;</run>
+                <run bold='true'>&lt;[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[none:Type:nk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
             <style>
               <style-rule element='mark'>
                 <format attr='mark-color' value='#000000' />
@@ -509,6 +632,18 @@
             <encodings>
               <color column='[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[none:Type:nk]' />
             </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Time:&#9;</run>
+                <run bold='true'>&lt;[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[tmi:Time:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>No. User:&#9;</run>
+                <run bold='true'>&lt;[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[ctd:User:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Type:&#9;</run>
+                <run bold='true'>&lt;[federated.0ma2s091b9vlcl1amg4bh1wz41lc].[none:Type:nk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
           </pane>
         </panes>
         <rows>([federated.0ma2s091b9vlcl1amg4bh1wz41lc].[ctd:User:qk] + [federated.0ma2s091b9vlcl1amg4bh1wz41lc].[ctd:User:qk])</rows>
@@ -517,7 +652,7 @@
     </worksheet>
   </worksheets>
   <windows source-height='30'>
-    <window class='worksheet' name='LINE'>
+    <window class='worksheet' maximized='true' name='LINE'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -589,7 +724,7 @@
         <default-map-tool-selection tool='2' />
       </viewpoint>
     </window>
-    <window class='worksheet' maximized='true' name='TYPE'>
+    <window class='worksheet' name='TYPE'>
       <cards>
         <edge name='left'>
           <strip size='160'>

@@ -32,7 +32,8 @@ def mysqlwrite(filename,loca):
 		dwelltime=difftime.difftime(row[14],row[0])
 		lis=[row[0],row[14],dwelltime,row[1],row[6],loca,row[-2],row[-1]]
 		cursor.execute("insert into test (Time,Firstime,Dwell, User, Type,Location,Latitude, Longitude) values (%s,%s,%s,%s,%s,%s,%s,%s)",(lis))
-
+	
+	cursor.execute("DELETE FROM test where Dwell>900")#删除固定的设备，平滑dwell曲线
 	db.commit() 
 	# 关闭数据库连接
 	db.close()
