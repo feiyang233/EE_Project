@@ -1,0 +1,10 @@
+Environment:
+
+Connected with NUS WiFi, access WiFi share folder.
+Or login DATACOMMONS 
+https://datacommons.nus.edu.sg/Default
+
+1. python 3.6
+2. MySQL 5.7
+3. Tableau
+
