@@ -30,7 +30,7 @@ Email: yangfei@u.nus.edu
 |   |-- copy.py  
 |   |-- uniform.py  
 |   |-- main_rate.py
-|   |-- --time_mac  
-|   |-- -- -- generate_time
+|   |-- --time_mac.py  
+|   |-- -- -- generate_time.py
 |- requirements.txt
 ```
