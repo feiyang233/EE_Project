@@ -1,4 +1,4 @@
-## Master Project: Estimating Crowd Levels in WiFi-based Environments
+## Master Project: History Crowd Analysis in WiFi-based Environments
 
 This is my master project in NUS.
 
